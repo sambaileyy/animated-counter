@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin    : 0;
+    padding   : 0;
+}
+
+body {
+    font-family    : 'Open Sans', sans-serif;
+    background     : lightskyblue url(/bg.jpg);
+    color          : #ffffff;
+    display        : flex;
+    flex-direction : column;
+    justify-content: flex-end;
+    height         : 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin   : 0 auto;
+    overflow : auto;
+}
+
+header {
+    flex           : 1;
+    height         : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+.counters {
+    background: #2d3cb9;
+    color     : white;
+    padding   : 40px 20px;
+    border-top: 3px #fd9498 solid;
+}
+
+.counters .container {
+    display              : grid;
+    grid-gap             : 30px;
+    grid-template-columns: repeat(4, 1fr);
+    text-align           : center;
+}
+
+.counters i {
+    color        : lightskyblue;
+    margin-bottom: 5px;
+}
+
+.counters .counter {
+    font-size: 45px;
+    margin   : 10px 0;
+}
+
+@media (max-width: 700px) {
+    .counters .container {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .counters .container>div:nth-child(1),
+    .counters .container>div:nth-child(2) {
+        border-bottom : lightskyblue 1px solid;
+        padding-bottom: 20px;
+    }
+}
